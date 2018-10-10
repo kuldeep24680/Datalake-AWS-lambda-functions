@@ -1,4 +1,4 @@
-# AWS-lambda-functions-to-validate-and-copy-file-to-s3-bucekt
+# AWS-lambda-functions-to-validate-and-copy-file-to-s3-bucket
 This repository contains lambda functions that can validate the metadata tags attached to s3 object and on the basis of validation it copies the file to respective s3 buckets with proper metadata tags by running cli command on ec2 instance.
 
 Validation is done on the basis of two factors i.e.
