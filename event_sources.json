@@ -1,0 +1,10 @@
+{
+  "EventSourceMappings": [
+    {
+      "EventSourceArn": "your event source arn",
+      "StartingPosition": "LATEST",
+      "BatchSize": 100,
+      "Enabled": true
+    }
+  ]
+ }
