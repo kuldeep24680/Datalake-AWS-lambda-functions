@@ -1,0 +1,10 @@
+node_modules
+.npmignore
+context.json
+*.tgz
+*.zip
+*.env
+*.json
+test*
+build
+.lambda
