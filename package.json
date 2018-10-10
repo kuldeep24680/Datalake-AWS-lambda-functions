@@ -1,0 +1,24 @@
+{
+  "name": "file-transfer-lambda-function",
+  "description": "Node.js lambda function for file transfer betweene the buckets using ec2 cli commands",
+  "author": {
+    "name": "Kuldeep Singh Chouhan",
+    "email": "thinkdifferentkc@gmail.com"
+  },
+  "license": "MIT License",
+  "main": "index.handler",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "asn1" : "0.2.3",
+    "simple-ssh" : "1.0.0",
+    "ssh2" : "0.5.5",
+    "ssh2-streams" : "0.1.2",
+    "xtend" : "4.0.1"
+    
+    },
+  
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/kuldeep24680/Datalake-AWS-lambda-functions"
+  }
+}
