@@ -47,7 +47,7 @@ console.log (key);
                 });
                 var response=JSON.stringify(this.httpResponse.headers);
                 console.log("response"+response.replace(/\"/g, ""));
-               if(!response.includes('x-amz-meta-retention') || !response.includes('x-amz-meta-usecase') || !response.includes('x-amz-meta-status') || !response.includes('x-amz-meta-business') || !response.includes('x-amz-meta-quality') || !response.includes('x-amz-meta-refresh_velocity') || !response.includes('x-amz-meta-source') || !response.includes('x-amz-meta-ingestion_owner') || !response.includes('x-amz-meta-confidentiality') || !response.includes('x-amz-meta-expiration') || !response.includes('x-amz-meta-level1_ownership') || !response.includes('x-amz-meta-level2_ownership') || !response.includes('x-amz-meta-email_id') || !response.includes('x-amz-meta-url')){
+               if(!response.includes('x-amz-meta-name') || !response.includes('x-amz-meta-usecase') || !response.includes('x-amz-meta-quality') || !response.includes('x-amz-meta-bucket_owner') || !response.includes('x-amz-meta-email_id') || !response.includes('x-amz-meta-url')){
                 
                
                  s3FileCommand_fail =   'sudo /usr/local/bin/aws s3 cp s3://' + bucket + '/' + key + ' s3://' + fail + '/'  + ' --sse';
@@ -88,18 +88,10 @@ console.log (key);
                  bucket_owner = JSON.stringify(this.httpResponse.headers['x-amz-meta-bucket_owner']); 
                  email_Id=JSON.stringify(this.httpResponse.headers['x-amz-meta-email_id']);
                  meta_url=bucket+'/'+ key;
-                 console.log ("Retention"+retention.replace(/\"/g, ""));
-                 console.log ("status"+status.replace(/\"/g, ""));
-                 console.log ("business"+business.replace(/\"/g, ""));
+                 console.log ("name"+name.replace(/\"/g, ""));
                  console.log ("use_case"+use_case.replace(/\"/g, ""));
                  console.log ("meta_quality"+quality.replace(/\"/g, ""));
-                 console.log ("refresh_velocity"+refresh_velocity.replace(/\"/g, ""));
-                 console.log ("source"+source.replace(/\"/g, ""));
-                 console.log ("ingestion_owner"+ingestion_owner.replace(/\"/g, ""));
-                 console.log ("meta_confidentiality"+confidentiality.replace(/\"/g, ""));
-                 console.log ("expiration"+expiration.replace(/\"/g, ""));
-                 console.log ("level_1_ownership"+level1_ownership.replace(/\"/g, ""));
-                 console.log ("level_2_ownership"+level2_ownership.replace(/\"/g, ""));
+                 console.log ("bucket_owner"+bucket_owner.replace(/\"/g, ""));
                  console.log ("email_Id"+email_Id.replace(/\"/g, ""));
                  console.log ("url"+meta_url);
                   
@@ -115,9 +107,8 @@ console.log (key);
 
                  
                   console.log("before validation:"+Date.now());
-                if(retention .replace(/\"/g, "") ===""  || business.replace(/\"/g, "") ==="" || refresh_velocity.replace(/\"/g, "") ===""  || source.replace(/\"/g, "") ==="" || status.replace(/\"/g, "") ===""
-                || ingestion_owner.replace(/\"/g, "") ==="" || confidentiality.replace(/\"/g, "") ==="" || expiration.replace(/\"/g, "") ==="" 
-                || level1_ownership.replace(/\"/g, "") ==="" || level2_ownership.replace(/\"/g, "") ==="")
+                if(name.replace(/\"/g, "") ==="" || use_case.replace(/\"/g, "") ==="" || quality.replace(/\"/g, "") ===""
+                || bucket_owner.replace(/\"/g, "") ==="" || meta_url.replace(/\"/g, "") ==="" || email_Id.replace(/\"/g, "") ==="")
                 {
                     
                 
