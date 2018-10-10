@@ -14,8 +14,16 @@
     "ssh2" : "0.5.5",
     "ssh2-streams" : "0.1.2",
     "xtend" : "4.0.1"
-    
     },
+   "bundledDependencies": [
+    "fs",
+     "asn1",
+     "ssh2",
+     "simple-ssh",
+     "ssh2",
+     "xtend",
+     "file.pem" #in order ssh into ec2 server to initilize the copy operation through cli 
+  ],
   
   "repository": {
     "type" : "git",
