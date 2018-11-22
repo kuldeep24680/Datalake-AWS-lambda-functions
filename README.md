@@ -10,7 +10,4 @@ Validation is done on the basis of two factors i.e.
 a. those objects should contains list of metadata (defined by user)
 b. those metadata tags should have a values, they should not be empty.
 
-Lambda function in Updating_dynamodb_table_with_s3_object_metadata folder that can read the metadata tags of newly uploaded file to S3 bucket and update the same values in dynamodb table with proper schema.
-
-Lambda function in Indexing_data_in_ES_from_dynamodb_table folder that can read the newly updated/put/deleted data in dynamodb table and index it in AWS elasticsearch through its endpoint.
 
