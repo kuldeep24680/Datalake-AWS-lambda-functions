@@ -1,0 +1,1 @@
+This lambda function reads the metadata tags and values of newly ingested file in s3 bucket and then it stores those values in different variables and then pass them into dynamodb table by defining a proper schema in JSON format.
